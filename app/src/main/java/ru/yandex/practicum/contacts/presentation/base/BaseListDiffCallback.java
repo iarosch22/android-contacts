@@ -1,5 +1,7 @@
 package ru.yandex.practicum.contacts.presentation.base;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DiffUtil;
 
 import ru.yandex.practicum.contacts.presentation.main.ContactUi;
