@@ -9,12 +9,12 @@ import ru.yandex.practicum.contacts.presentation.main.ContactUi;
 public class BaseListDiffCallback<V extends ListDiffInterface<V>> extends DiffUtil.ItemCallback<V> {
     @Override
     public boolean areItemsTheSame(@NonNull V oldItem, @NonNull V newItem) {
-        return oldItem.hashCode() == newItem.hashCode();
+        return oldItem.theSameAs(newItem);
     }
 
     @Override
     public boolean areContentsTheSame(@NonNull V oldItem, @NonNull V newItem) {
-        return oldItem.theSameAs(newItem);
+        return oldItem.equals(newItem);
     }
 
     @Nullable
